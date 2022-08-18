@@ -74,7 +74,5 @@ def to_hex_list(data):
     elif is_hex_list(data):
         return data
     else:
-        raise Exception('cannot convert to int list')
-    for i, val in enumerate(res):
-        res[i] = hex(val)
-    return res
+        raise Exception('cannot convert to hex list')
+    return [hex(val) for val in res]
